@@ -14,7 +14,7 @@ struct ListView: View {
     var body: some View {
         
         // Only display the results.
-        // Actions is out of escope for this project
+        // Actions is out of scope for this project
         List(repositories, id: \.self) { item in
             
             // We may move the code below that construct the row to a separate view

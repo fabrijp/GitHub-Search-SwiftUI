@@ -19,7 +19,7 @@ class API {
     
     var cancellables = Set<AnyCancellable>()
     
-    // The error is out of escope for this project. If any error occurs we will return an empty or nil object.
+    // The error is out of scope for this project. If any error occurs we will return an empty or nil object.
     private func fetch(search:String) -> AnyPublisher<Items, Never>? {
         
         guard let url = URL(string: URL.githubSearchURL + "q=\(search)" + URL.githubSortParams) else {
