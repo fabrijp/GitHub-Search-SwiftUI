@@ -8,37 +8,36 @@
 import SwiftUI
 
 struct ListView: View {
-    
-    @Binding var repositories:[Repository]
-    
+
+    @Binding var repositories: [Repository]
+
     var body: some View {
-        
+
         // Only display the results.
         // Actions is out of scope for this project
         List(repositories, id: \.self) { item in
-            
+
             // We may move the code below that construct the row to a separate view
             // in case more data or complex actions be inserted
-            VStack(alignment:.leading) {
-                
+            VStack(alignment: .leading) {
+
                 HStack {
                     Text(item.fullName)
                     Spacer()
                     Text("⭐️\(item.starGazersCount)")
                         .font(.footnote)
                 }
-                
+
                 if let language = item.language {
                     Text(language)
                         .font(.footnote)
                         .foregroundColor(.gray)
                 }
-                
+
             }
-            
-            
+
         }
-        
+
     }
 }
 

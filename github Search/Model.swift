@@ -7,24 +7,24 @@
 
 import Foundation
 
-struct Repository:Codable, Hashable {
-    
+struct Repository: Codable, Hashable {
+
     enum CodingKeys: String, CodingKey {
         case htmlUrl = "html_url"
         case fullName = "full_name"
         case language = "language"
         case starGazersCount = "stargazers_count"
     }
-    
-    var htmlUrl:String
-    var fullName:String
-    var language:String?
-    var starGazersCount:Int
-    
+
+    var htmlUrl: String
+    var fullName: String
+    var language: String?
+    var starGazersCount: Int
+
 }
 
-struct Items:Codable {
-    var items:[Repository]
+struct Items: Codable {
+    var items: [Repository]
     init() {
         items = []
     }

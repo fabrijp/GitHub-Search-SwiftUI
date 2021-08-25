@@ -8,13 +8,11 @@
 import SwiftUI
 import Combine
 
-struct SearchBar:View {
-    
-    @Binding var searchText:String
-    
+struct SearchBar: View {
+
+    @Binding var searchText: String
     var api = API()
-    
-    
+
     var body: some View {
         HStack {
             Image("github-logo")
@@ -26,7 +24,7 @@ struct SearchBar:View {
                 .foregroundColor(.gray)
         }
         .padding()
-        
+
     }
-    
+
 }
